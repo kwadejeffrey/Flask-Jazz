@@ -42,7 +42,7 @@ class Task(Resource):
         db.session.commit()
         tasks = TaskModel.query.all()
         # return tasks, 201
-        return "Task has been added", 201
+        return f"{args['task_name']} has been added", 201
     
 api.add_resource(Task, '/api/tasks/')
 
